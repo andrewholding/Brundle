@@ -459,18 +459,23 @@ jg.plotDeSeqCombined <-
 
         full.res = rbind(jg.controlResultsDeseq, jg.experimentResultsDeseq)
 
-        xyplot(
-            full.res$log2FoldChange ~ log(full.res$baseMean, base = 10),
-            data = full.res,
-            groups = full.res$group,
-            col = c(
+        colours<-
+            c(
                 "grey40",
                 "grey80",
                 "#5480ff",
                 "#ff5454",
                 "#08298a",
                 "#750505"
-            ),
+            )
+        names(colours)<-c("a","b","c","d","e","f")
+        colours<-colours[sort(unique(full.res$group))]
+
+        xyplot(
+            full.res$log2FoldChange ~ log(full.res$baseMean, base = 10),
+            data = full.res,
+            groups = full.res$group,
+            col = colours,
             ylab = expression('log'[2] * ' Differential ChIP'),
             xlab = expression("log"[10] ~ "Mean of Normalized Counts"),
             aspect = 1.0,
