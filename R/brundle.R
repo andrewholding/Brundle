@@ -1,3 +1,5 @@
+
+
 ######################
 #
 # Brundle - ChIP-seq Normalisation Convienice Functions
@@ -17,7 +19,7 @@
 #' bam files. It returns these in as a list of numbers in the same order.
 #' @param jg.bamFiles is a list of bam files to count.
 #' @keywords bamFiles bam reads
-
+#' @import Rsamtools
 
 jg.countAlignedMReads <- function(jg.bamFiles) {
     jg.counts <- numeric()
@@ -109,6 +111,19 @@ jg.plotNormalization <-
         )
     }
 
+#' jg.getNormalizationCoefficient
+#'
+#' This function allows the user to caryy out the normalisation and returns a
+#' coefficient by using a linear fit to the control data.
+#' @param jg.controlCountsTreated Control counts extracted from the Diffbind object for the treated condition using jg.getControlCounts
+#' @param jg.controlCountsUntreated Control ounts extracted from the Diffbind object for the untreated condition using jg.getControlCounts
+#' @keywords normalization
+#' @export
+#' @examples
+#' data(jg.controlCountsTreated, package="Brundle")
+#' data(jg.controlCountsUntreated, package="Brundle")
+#' jg.coefficient<-jg.getNormalizationCoefficient(jg.controlCountsTreated,
+#'                                                   jg.controlCountsUntreated)
 
 jg.getNormalizationCoefficient <-
     function(jg.controlCountsTreated,
@@ -197,6 +212,7 @@ jg.plotMA <-
 #' @param dbaSummits is the peak width in bp from summits (optional)
 #' @keywords DiffBind counts load samplesheet
 #' @export
+#' @import DiffBind
 
 
 jg.getDba <- function (jg.experimentSampleSheet,
@@ -224,11 +240,12 @@ jg.getDba <- function (jg.experimentSampleSheet,
 #' @examples
 #' data(dbaExperiment, package="Brundle")
 #' jg.experimentPeakset <- jg.dbaGetPeakset(dbaExperiment)
+#' @import DiffBind
 
 jg.dbaGetPeakset <- function(dba)
 {
     jg.peakset <-
-        dba.peakset(dba, bRetrieve = T, DataType = DBA_DATA_FRAME)
+        dba.peakset(dba, bRetrieve = TRUE, DataType = DBA_DATA_FRAME)
     #Correct sample names back to that in sample sheet,
     #as DiffBind changes them on export.
 
@@ -347,10 +364,11 @@ jg.applyNormalisation <-
 #'  jg.plotDeSeq(jg.experimentResultsDeseq,
 #'   p=0.01,
 #'   title.main="Fold-change in ER binding",
-#'   flip=T
+#'   flip=TRUE
 #'  )
 #'
-
+#' @import lattice
+#'
 jg.plotDeSeq <-
     function(ma.df,
              p = 0.01,
@@ -408,6 +426,8 @@ jg.plotDeSeq <-
 #'                     jg.experimentResultsDeseq,
 #'                     title.main="ER and CTCF Binding Folding changes on ER treatment",
 #'                     p=0.01,flip=TRUE)
+#'
+#' @import lattice
 
 jg.plotDeSeqCombined <-
     function(jg.controlResultsDeseq,
@@ -552,7 +572,7 @@ jg.convertPeakset <- function(jg.controlPeakset)
 #' @keywords DESeq2
 #' @export
 #' @examples jg.runDeSeq(jg.PeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
-
+#' @import DESeq2
 jg.runDeSeq <-
     function(jg.PeaksetDeSeq,
              jg.conditions,

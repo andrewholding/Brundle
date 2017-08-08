@@ -29,6 +29,7 @@ jg.plotDeSeqCombined(jg.controlResultsDeseq,
                     jg.experimentResultsDeseq,
                     title.main="ER and CTCF Binding Folding changes on ER treatment",
                     p=0.01,flip=TRUE)
+
 }
 \keyword{DESeq2}
 \keyword{data}

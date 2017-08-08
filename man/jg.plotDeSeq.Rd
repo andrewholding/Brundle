@@ -26,7 +26,7 @@ Plots the output from DESeq2 for the Brundle pipeline
  jg.plotDeSeq(jg.experimentResultsDeseq,
   p=0.01,
   title.main="Fold-change in ER binding",
-  flip=T
+  flip=TRUE
  )
 
 }
