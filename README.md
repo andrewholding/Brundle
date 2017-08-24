@@ -4,7 +4,7 @@ to internal or external controls.
 
 It is supported by the data package [BrudleData](https://github.com/andrewholding/BrundleData).
 
-For an example analysis and scripts for preprocessing data see [Brundle_Example](https://github.com/andrewholding/Brundle_Example)
+[Brundle_Example](https://github.com/andrewholding/Brundle_Example) provides worked examples and preprocessing scripts for people who want to use Brundle in their own research. The examples are also packaged as a [Docker Container](http://dockerhub.com/andrewholding/brundle) pre-installed with all the tools to run the examples and pipeline along with [instructions on running the container](https://github.com/andrewholding/Brundle_Example/blob/master/README.md#using-docker-container).
 
 ## Workflow
 
