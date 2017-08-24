@@ -1,7 +1,7 @@
 # Brundle
 
-Brundle provides a series of functions for the normalisation of ChIP-Seq data
-to internal or external controls.
+Brundle is an R package that provides a series of functions for the normalisation of ChIP-Seq data
+to internal or external controls. 
 
 For example data see the data package [BrudleData](https://github.com/andrewholding/BrundleData).
 
