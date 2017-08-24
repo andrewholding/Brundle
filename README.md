@@ -1,5 +1,5 @@
 # Brundle
-![Brundle](http://andrewholding.com/img/research/brundle_outline.png)
+<img style="width: 50%" src="http://andrewholding.com/img/research/brundle_outline.png" alt="Brundle Overview">
 
 Brundle is an R package that provides a series of functions for the normalisation of ChIP-Seq data
 to internal or external controls. 
