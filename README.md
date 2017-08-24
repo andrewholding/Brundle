@@ -9,4 +9,4 @@ For an example analysis and scripts for preprocessing data see [Brundle_Example]
 
 ## Workflow
 
-![Workflow](https://github.com/andrewholding/Brundle_Example/raw/master/images/brundle_workflow.png)
+![Workflow](https://cdn.rawgit.com/andrewholding/Brundle_Example/master/images/workflow.svg)
