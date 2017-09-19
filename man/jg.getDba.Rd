@@ -10,6 +10,8 @@ jg.getDba(jg.experimentSampleSheet, dbaSummits, ...)
 \item{jg.experimentSampleSheet}{is the filename of samplesheet to be loaded}
 
 \item{dbaSummits}{is the peak width in bp from summits (optional)}
+
+\item{...}{are the parameters to be passed to DiffBinds dba.count function}
 }
 \description{
 Generates a DiffBind object from a valid SampleSheet with the required

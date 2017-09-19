@@ -22,7 +22,10 @@ correction factor.
 }
 \examples{
 data(jg.experimentPeakset, package="Brundle")
-jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset, 1.267618, 0.6616886, c("1b", "2b", "3b"))
+jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset,
+                                                       1.267618,
+                                                       0.6616886,
+                                                       c("1b", "2b", "3b"))
 
 }
 \keyword{correction}

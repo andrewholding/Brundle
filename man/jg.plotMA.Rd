@@ -16,11 +16,11 @@ jg.plotMA(jg.experimentPeakset, jg.controlPeakset, jg.untreatedNames,
 
 \item{jg.treatedNames}{is a list of sample samples for the treated conditions}
 
-\item{jg.coefficient}{is a normalisation coefficent for the data that can be generated via the pipeline. Can be set to 1 to view before normalisation.}
+\item{jg.coefficient}{is a normalisation coefficient for the data that can be generated via the pipeline. Can be set to 1 to view before normalisation.}
 }
 \description{
 This function plots both the control and experimental data on an MA plot.
-It also allows for the user to provide a normalisation coefficent for the data.
+It also allows for the user to provide a normalisation coefficient for the data.
 }
 \keyword{normalization}
 \keyword{plot}

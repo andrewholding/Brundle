@@ -17,6 +17,9 @@ jg.runDeSeq(jg.PeaksetDeSeq, jg.conditions, jg.SizeFactors = NULL)
 Runs DESeq2 on our peakset after we have obtained the normalised size factors.
 }
 \examples{
-jg.runDeSeq(jg.PeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
+data(jg.controlPeaksetDeSeq,package="Brundle")
+data(jg.conditions,package="Brundle")
+jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+jg.runDeSeq(jg.controlPeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
 }
 \keyword{DESeq2}

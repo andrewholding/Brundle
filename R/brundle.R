@@ -41,6 +41,7 @@ jg.countAlignedMReads <- function(jg.bamFiles) {
 #'  samplesheet.
 #' @keywords bamFiles bam reads
 #' @export
+#' @import utils
 #' @examples
 #' data(jg.controlPeakset, package="Brundle")
 #' fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv",package="Brundle")
@@ -69,6 +70,7 @@ jg.getControlCounts <-
 #' @param jg.controlCountsUntreated Control ounts extracted from the Diffbind object for the untreated condition using jg.getControlCounts
 #' @keywords plot normalization
 #' @export
+#' @import graphics stats
 #' @examples
 #' data(jg.controlCountsTreated, package="Brundle")
 #' data(jg.controlCountsUntreated, package="Brundle")
@@ -119,6 +121,7 @@ jg.plotNormalization <-
 #' @param jg.controlCountsUntreated Control ounts extracted from the Diffbind object for the untreated condition using jg.getControlCounts
 #' @keywords normalization
 #' @export
+#' @import stats
 #' @examples
 #' data(jg.controlCountsTreated, package="Brundle")
 #' data(jg.controlCountsUntreated, package="Brundle")
@@ -138,13 +141,13 @@ jg.getNormalizationCoefficient <-
 #' jg.plotMA
 #'
 #' This function plots both the control and experimental data on an MA plot.
-#' It also allows for the user to provide a normalisation coefficent for the data.
+#' It also allows for the user to provide a normalisation coefficient for the data.
 #' @param jg.experimentPeakset is the peakset of the experimental data extracted from a DiffBind ojbect with jg.dbaGetPeakset
 #' @param jg.controlPeakset is the peakset of the control data extracted from a DiffBind ojbect with jg.dbaGetPeakset
 #' @param jg.untreatedNames is a list of sample names for the control or untreated conditions
 #' @param jg.treatedNames is a list of sample samples for the treated conditions
-#' @param jg.coefficient is a normalisation coefficent for the data that can be generated via the pipeline. Can be set to 1 to view before normalisation.
-#' @param
+#' @param jg.coefficient is a normalisation coefficient for the data that can be generated via the pipeline. Can be set to 1 to view before normalisation.
+#' @import graphics stats
 #' @keywords plot normalization
 
 jg.plotMA <-
@@ -210,6 +213,7 @@ jg.plotMA <-
 #'
 #' @param jg.experimentSampleSheet is the filename of samplesheet to be loaded
 #' @param dbaSummits is the peak width in bp from summits (optional)
+#' @param ... are the parameters to be passed to DiffBinds dba.count function
 #' @keywords DiffBind counts load samplesheet
 #' @export
 #' @import DiffBind
@@ -259,6 +263,7 @@ jg.dbaGetPeakset <- function(dba)
 #' Extracts the sample Id from DiffBind formatted SampleSheet in csv format.
 #'
 #' @param jg.controlSampleSheet is the filename of the samplesheet
+#' @import utils
 #' @keywords DiffBind samplesheet sample
 
 jg.getSampleIds <- function(jg.controlSampleSheet)
@@ -282,6 +287,7 @@ jg.getSampleIds <- function(jg.controlSampleSheet)
 #' @param jg.untreatedNames is a list of the names of samples that are untreated
 #' @keywords DiffBind correction normalisation
 #' @export
+#' @import utils
 #' @examples
 #' data(jg.controlCountsTreated, package="Brundle")
 #' data(jg.controlCountsUntreated, package="Brundle")
@@ -332,7 +338,10 @@ jg.getCorrectionFactor <-
 #' @export
 #' @examples
 #' data(jg.experimentPeakset, package="Brundle")
-#' jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset, 1.267618, 0.6616886, c("1b", "2b", "3b"))
+#' jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset,
+#'                                                        1.267618,
+#'                                                        0.6616886,
+#'                                                        c("1b", "2b", "3b"))
 #'
 
 jg.applyNormalisation <-
@@ -353,8 +362,8 @@ jg.applyNormalisation <-
 #' Plots the output from DESeq2 for the Brundle pipeline
 #'
 #' @param ma.df is the result Dataframe from DESeq2
-#' @param p is the minium FDR to highlight as significant
-#' @param title is the plot title
+#' @param p is the minimum FDR to highlight as significant
+#' @param title.main is the plot title
 #' @param log2fold is the minimum log2 fold change for highlighted points
 #' @param flip when set to TRUE flips the data
 #' @keywords DESeq2 data plot
@@ -412,9 +421,9 @@ jg.plotDeSeq <-
 #' Overlays the plots from the output from DESeq2 for the Brundle pipeline
 #'
 #' @param jg.controlResultsDeseq is the result Dataframe from DESeq2 for the control conditions
-#' @param jg.experimentResultsDeseqis the result Dataframe from DESeq2 for the experimental conditions
+#' @param jg.experimentResultsDeseq is the result Dataframe from DESeq2 for the experimental conditions
 #' @param title.main is the plot title
-#' @param padjX is the minium FDR to highlight as significant
+#' @param padjX is the minimum FDR to highlight as significant
 #' @param flip when set to TRUE flips the data
 #' @keywords DESeq2 data plot
 #' @export
@@ -571,7 +580,10 @@ jg.convertPeakset <- function(jg.controlPeakset)
 #' @param jg.SizeFactors is the size factors generated from the control samples
 #' @keywords DESeq2
 #' @export
-#' @examples jg.runDeSeq(jg.PeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
+#' @examples data(jg.controlPeaksetDeSeq,package="Brundle")
+#' @examples data(jg.conditions,package="Brundle")
+#' @examples jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+#' @examples jg.runDeSeq(jg.controlPeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
 #' @import DESeq2
 jg.runDeSeq <-
     function(jg.PeaksetDeSeq,
@@ -595,11 +607,14 @@ jg.runDeSeq <-
 #' Correct the size factors in a DiffBind object using our DESeq2 pipeline for
 #' normalisation.
 #'
-#' @param dba
-#' @param jg.controlSizeFactors
+#' @param dba Diffbind object to have size factors corrected
+#' @param jg.controlSizeFactors Vector of replacement size factors
 #' @keywords DESeq2 Diffbind
 #' @export
-#' @examples jg.correctDBASizeFactors(dba,jg.controlSizeFactors)
+#' @examples data(jg.controlPeaksetDeSeq,package="Brundle")
+#' @examples data(dbaExperiment,package="Brundle")
+#' @examples jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+#' @examples jg.correctDBASizeFactors(dbaExperiment,jg.controlSizeFactors)
 
 
 jg.correctDBASizeFactors <- function(dba, jg.controlSizeFactors)

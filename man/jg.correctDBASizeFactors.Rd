@@ -6,12 +6,20 @@
 \usage{
 jg.correctDBASizeFactors(dba, jg.controlSizeFactors)
 }
+\arguments{
+\item{dba}{Diffbind object to have size factors corrected}
+
+\item{jg.controlSizeFactors}{Vector of replacement size factors}
+}
 \description{
 Correct the size factors in a DiffBind object using our DESeq2 pipeline for
 normalisation.
 }
 \examples{
-jg.correctDBASizeFactors(dba,jg.controlSizeFactors)
+data(jg.controlPeaksetDeSeq,package="Brundle")
+data(dbaExperiment,package="Brundle")
+jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+jg.correctDBASizeFactors(dbaExperiment,jg.controlSizeFactors)
 }
 \keyword{DESeq2}
 \keyword{Diffbind}

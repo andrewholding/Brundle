@@ -10,13 +10,13 @@ jg.plotDeSeq(ma.df, p = 0.01, title.main = "Differential ChIP",
 \arguments{
 \item{ma.df}{is the result Dataframe from DESeq2}
 
-\item{p}{is the minium FDR to highlight as significant}
+\item{p}{is the minimum FDR to highlight as significant}
+
+\item{title.main}{is the plot title}
 
 \item{log2fold}{is the minimum log2 fold change for highlighted points}
 
 \item{flip}{when set to TRUE flips the data}
-
-\item{title}{is the plot title}
 }
 \description{
 Plots the output from DESeq2 for the Brundle pipeline

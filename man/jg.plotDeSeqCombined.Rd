@@ -10,13 +10,13 @@ jg.plotDeSeqCombined(jg.controlResultsDeseq, jg.experimentResultsDeseq,
 \arguments{
 \item{jg.controlResultsDeseq}{is the result Dataframe from DESeq2 for the control conditions}
 
+\item{jg.experimentResultsDeseq}{is the result Dataframe from DESeq2 for the experimental conditions}
+
 \item{title.main}{is the plot title}
 
-\item{padjX}{is the minium FDR to highlight as significant}
+\item{padjX}{is the minimum FDR to highlight as significant}
 
 \item{flip}{when set to TRUE flips the data}
-
-\item{jg.experimentResultsDeseqis}{the result Dataframe from DESeq2 for the experimental conditions}
 }
 \description{
 Overlays the plots from the output from DESeq2 for the Brundle pipeline

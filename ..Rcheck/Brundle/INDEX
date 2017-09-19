@@ -1,0 +1,18 @@
+jg.applyNormalisation   jg.applyNormalisation
+jg.convertPeakset       jg.convertPeakset
+jg.correctDBASizeFactors
+                        jg.correctDBASizeFactors
+jg.countAlignedMReads   jg.countAlignedMReads
+jg.dbaGetPeakset        dbaGetPeakset
+jg.getControlCounts     jg.getControlCounts
+jg.getCorrectionFactor
+                        jg.getCorrectionFactor
+jg.getDba               jg.getDba
+jg.getNormalizationCoefficient
+                        jg.getNormalizationCoefficient
+jg.getSampleIds         jg.getSampleIds
+jg.plotDeSeq            jg.plotDeSeq
+jg.plotDeSeqCombined    jg.plotDeSeqCombined
+jg.plotMA               jg.plotMA
+jg.plotNormalization    jg.plotNormalization
+jg.runDeSeq             jg.runDeSeq

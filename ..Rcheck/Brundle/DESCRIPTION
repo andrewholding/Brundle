@@ -1,0 +1,14 @@
+Package: Brundle
+Type: Package
+Title: Brundle: Tools for the normalisation of ChIP-Seq data
+Version: 1.0.0
+Author: Andrew Holding
+Maintainer: Andrew Holding <andrew.holding@cruk.cam.ac.uk>
+Description: Brundle provides a series of convienice functions for normalising ChIP-seq data. This input can either be from DiffBind or a matrix formatted for DESeq2. The output is either a Diffbind object or the defualt DESeq2 output. Either can then be processed as normal.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Depends: DiffBind, Rsamtools, DESeq2, lattice
+RoxygenNote: 6.0.1.9000
+biocViews: Software, Technology, Sequencing, ChIPSeq
+Built: R 3.4.1; ; 2017-09-18 11:32:52 UTC; unix
