@@ -13,14 +13,10 @@ It is supported by the data package [BrudleData](https://github.com/andrewholdin
 ## Example Data on UCSC Gene Browser
 [CTCF Spike in-data](http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=Brundle)
 
-[H2Av Spike in-data (Human)]
-(https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av)
+[H2Av Spike in-data - Human](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av)
 
-[H2Av Spike in-data (Drosophilia)]
-(https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av%20dm3)
+[H2Av Spike in-data -Drosophilia](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av%20dm3)
 
-[hsER/mmER Spike-in data (Human)]
-(https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=hsER%2FmmER)
+[hsER/mmER Spike-in data - Human](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=hsER%2FmmER)
 
-[hsER/mmER Spike-in data (Mouse)]
-(https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=HsER%2FmmER%20mm9)
+[hsER/mmER Spike-in data - Mouse](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=HsER%2FmmER%20mm9)
