@@ -1,104 +1,33 @@
-* using log directory ‘/Volumes/Flypeaks/Brundle/Brundle/..Rcheck’
+* using log directory ‘/Volumes/FlyPeakCaseStudy/Brundle/..Rcheck’
 * using R version 3.4.1 (2017-06-30)
 * using platform: x86_64-apple-darwin15.6.0 (64-bit)
 * using session charset: UTF-8
 * using option ‘--as-cran’
 * checking for file ‘./DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘Brundle’ version ‘1.0.0’
+* this is package ‘Brundle’ version ‘1.0.6’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andrew Holding <andrew.holding@cruk.cam.ac.uk>’
+Maintainer: ‘Andrew N Holding <andrew.holding@cruk.cam.ac.uk>’
 
-New submission
-
-The Title field starts with the package name.
-The Title field should be in title case, current version then in title case:
-‘Brundle: Tools for the normalisation of ChIP-Seq data’
-‘Brundle: Tools for the Normalisation of ChIP-Seq Data’
-
-The Description field should not start with the package name,
-  'This package' or similar.
+Found the following (possibly) invalid URLs:
+  URL: https://cran.r-project.org/web/packages/Brundle/index.html
+    From: README.md
+    Status: 200
+    Message: OK
+    CRAN URL not in canonical form
+  The canonical URL of the CRAN page for a package is 
+    https://CRAN.R-project.org/package=pkgname
 
 The build time stamp is missing.
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
-* checking for executable files ... WARNING
-Found the following executable files:
-  .git/objects/04/bc6875e939d84aec16e7493e8565645e3f5ddf
-  .git/objects/07/b6de1eeb94a5851cd9626eaa180361de87c214
-  .git/objects/0c/58de64a34935bfdda3487d65ebdd1230817256
-  .git/objects/0e/e3358fd1be0787bdfec771a12c5e8b657cf7e7
-  .git/objects/18/08a266677d8222105b26b69068845a40c0cf1f
-  .git/objects/26/fd639f2b78b0885949687af22e59d645a0981a
-  .git/objects/2c/69da8309d807f1f44bf0951ee27e98c0a00a03
-  .git/objects/2d/f949a5fc307f664bfa56cf8b68c0b8fe992ad8
-  .git/objects/2e/2bac5b60e684f4e6abad4ac6536c82fe8e6055
-  .git/objects/2f/9a0104e9ae4b6dea390dbb7bc84827ddd68a00
-  .git/objects/2f/f5fb2e3d36f9a76595e88cd5165cd74207f5f0
-  .git/objects/32/8b304c0c7b8e3794acfafb1b86b3284a6b5158
-  .git/objects/36/4a1293df5223e4951e81636b5d752bb73a0bd3
-  .git/objects/36/6fc1e6d8449e93f3706cf60a0a5eceea04a40f
-  .git/objects/46/30a3e117b1a913fa0e51d5032fdd1688eaedfb
-  .git/objects/48/5daac150a532c7e5072393867723bf2c58343d
-  .git/objects/4c/1b9e434d140fd0b57c55eaa3dd882af4af59d4
-  .git/objects/50/0aee151e16905a31f366da472318e0e243a25c
-  .git/objects/5b/6a0652566d10360493952aec6d4a4febc77083
-  .git/objects/5b/7c6817e3810a45cc7b3f4a586753ee0670618d
-  .git/objects/5b/86e599b3a4b11fde1a9ae6839c5b82b28555a4
-  .git/objects/64/0bfbbd91d9abdfcfb5137789eb93ac958b4502
-  .git/objects/66/c4185e8abc00e3017fd70c9ac543c56d709336
-  .git/objects/67/a5d42bd49b3011a188d8dc96511cbe6dce3cb1
-  .git/objects/68/e6bdacbe6f35d2c705e8e9927df0521ded3a02
-  .git/objects/6c/9c140400fcd464bde49ec8fc85205824f9375c
-  .git/objects/6c/f564ddd41080460409d094b7b612c499cf850b
-  .git/objects/73/019fe231376cd9b108e0bf9894ae9bee6cc405
-  .git/objects/74/81138171087b770bbf4a8cee536233c83b40e4
-  .git/objects/75/0742b96f4f934eb025da409c2e81b9acfa7d72
-  .git/objects/77/7c4ae002800ea6e63f5dfad393ad930efe25b7
-  .git/objects/77/cb8dc0b67aab5b130c0378889cb712d10efbe3
-  .git/objects/7e/848db22b12bcdadc62a299ba5fa7af5ca15c06
-  .git/objects/87/4baead7b1587ab2ef3ab83f031414cbb0bd7f4
-  .git/objects/8c/02dbf1fe883196c19945d9f7a5979a25b3964b
-  .git/objects/8e/f03bc2ab8b62e2e3516affabefc67bb80f065f
-  .git/objects/8f/57e45d69c94e6ac4562db0bba9cd424dc6b916
-  .git/objects/91/114bf2f2bba5e0c5252e75018da19b869776f1
-  .git/objects/91/5f5048137e348443e66679fdc21787a82364cb
-  .git/objects/93/b9d690d521dafa5620498d6c2c861868c6ca2f
-  .git/objects/94/51288eb589b915f550f1fba6422d5c6619bba9
-  .git/objects/94/fad7dd8d6fadb686b8d9d6a13ccd4899a3fb59
-  .git/objects/9a/e8f97c5b367b952412d0e7ced5b09bce16dd3b
-  .git/objects/9b/539ec2aac261f17849cf843a7f4fd851df764d
-  .git/objects/a1/006534813f400bad815d802915663ee90fd43b
-  .git/objects/a1/eaad8f15caf1e256b494e160e46565998c8665
-  .git/objects/ab/7ad4a9fd2c39209681b836301df86ea4c18ac8
-  .git/objects/ac/a234ddecea25564d0803fbf09789be201db394
-  .git/objects/ad/6e96fd0856aa67db2ca8dde549058d0c908927
-  .git/objects/af/cfe8aa81f66881d96df1379036cdb3a0229923
-  .git/objects/ba/448913053b936afe9d3e8d9c500d0597411350
-  .git/objects/be/113e2786d8532dfe268774482c88718440b7eb
-  .git/objects/c5/62548037c37671a4d96082a38ef81de850ed36
-  .git/objects/c6/2eeadbee9ed246e36aa65a8010d6e7fea65028
-  .git/objects/c7/872fafae8320ef428f09533d7ebf28024e76b3
-  .git/objects/c8/bdd92a125acd0e8cad28147b157eeb141791f8
-  .git/objects/c9/34c3075123834efae5d934f62e76127f2d51f2
-  .git/objects/ce/dece2c2515de4a5845be38acf68a22b25129f8
-  .git/objects/cf/3df6e88a844b620999a505027bc41ca6a91311
-  .git/objects/cf/cf4eacfa258f60dae8085dae105e246d4da9f7
-  .git/objects/d0/faa2fb3ecbfc143c4d291ed4759f63ffe24f47
-  .git/objects/d2/68c513c21cac14f6415bbaee918ba4bb8770db
-  .git/objects/d7/5f824ec6278db24891505b14ab3d915514dba7
-  .git/objects/e6/866f7483d7b995827146c0aa44a2b216605ad1
-  .git/objects/e8/164ba117ca1715ceb8f7c9d716e0ff6c7dab89
-  .git/objects/e9/35633cd08e4a65a34767df8cded172cee420cc
-  .git/objects/f1/47297c5e15be00f8c82bfee7c65a5800b13b80
-  .git/objects/fe/a46d328d82daf0f0c8c52d02822a97a3408c8a
-Source packages should not contain undeclared executable files.
-See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
+* checking for executable files ... OK
 * checking for hidden files and directories ... NOTE
 Found the following hidden files and directories:
+  .DS_Store
   .Rhistory
   .gitignore
   ..Rcheck
@@ -108,6 +37,7 @@ These were most likely included in error. See section ‘Package
 structure’ in the ‘Writing R Extensions’ manual.
 
 CRAN-pack does not know about
+  .DS_Store
   ..Rcheck
   .git
 * checking for portable file names ... OK
@@ -118,9 +48,8 @@ CRAN-pack does not know about
 * checking DESCRIPTION meta-information ... NOTE
 Checking should be performed on sources prepared by ‘R CMD build’.
 * checking top-level files ... NOTE
-Files ‘README.md’ or ‘NEWS.md’ cannot be checked without ‘pandoc’ being installed.
-Non-standard files/directories found at top level:
-  ‘Brundle.Rproj’ ‘vignette’
+Non-standard file/directory found at top level:
+  ‘Brundle.Rproj’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... WARNING
@@ -138,102 +67,67 @@ These should not be in a package tarball.
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
 * checking use of S3 registration ... OK
-* checking dependencies in R code ... OK
+* checking dependencies in R code ... NOTE
+Unexported object imported by a ':::' call: ‘DiffBind:::pv.resetCounts’
+  See the note in ?`:::` about the use of this operator.
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
-* checking R code for possible problems ... NOTE
-jg.getControlCounts: no visible global function definition for
-  ‘read.csv’
-jg.getCorrectionFactor: no visible global function definition for
-  ‘read.csv’
-jg.getNormalizationCoefficient: no visible global function definition
-  for ‘lm’
-jg.getSampleIds: no visible global function definition for ‘read.csv’
-jg.plotMA: no visible global function definition for ‘plot’
-jg.plotMA: no visible global function definition for ‘points’
-jg.plotMA: no visible global function definition for ‘lm’
-jg.plotMA: no visible global function definition for ‘abline’
-jg.plotNormalization: no visible global function definition for ‘plot’
-jg.plotNormalization: no visible global function definition for ‘lm’
-jg.plotNormalization: no visible global function definition for
-  ‘abline’
-jg.plotNormalization: no visible global function definition for
-  ‘points’
-jg.plotNormalization: no visible global function definition for
-  ‘legend’
-Undefined global functions or variables:
-  abline legend lm plot points read.csv
-Consider adding
-  importFrom("graphics", "abline", "legend", "plot", "points")
-  importFrom("stats", "lm")
-  importFrom("utils", "read.csv")
-to your NAMESPACE file.
+* checking R code for possible problems ... OK
 * checking Rd files ... OK
 * checking Rd metadata ... OK
-* checking Rd line widths ... NOTE
-Rd file 'jg.applyNormalisation.Rd':
-  \examples lines wider than 100 characters:
-     jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset, 1.267618, 0.6616886, c("1b", "2b", "3b"))
-
-These lines will be truncated in the PDF manual.
+* checking Rd line widths ... OK
 * checking Rd cross-references ... OK
-* checking for missing documentation entries ... WARNING
-Undocumented code objects:
-  ‘dbaExperiment’ ‘jg.conditions’ ‘jg.controlCountsTreated’
-  ‘jg.controlCountsUntreated’ ‘jg.controlPeakset’
-  ‘jg.controlPeaksetDeSeq’ ‘jg.controlResultsDeseq’
-  ‘jg.experimentPeakset’ ‘jg.experimentResultsDeseq’
-Undocumented data sets:
-  ‘dbaExperiment’ ‘jg.conditions’ ‘jg.controlCountsTreated’
-  ‘jg.controlCountsUntreated’ ‘jg.controlPeakset’
-  ‘jg.controlPeaksetDeSeq’ ‘jg.controlResultsDeseq’
-  ‘jg.experimentPeakset’ ‘jg.experimentResultsDeseq’
-All user-level objects in a package should have documentation entries.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
-* checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'jg.correctDBASizeFactors'
-  ‘dba’ ‘jg.controlSizeFactors’
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from documentation object 'Brundle':
+Brundle
+  Code: function(dbaExperiment, dbaControl, jg.treatedCondition,
+                 jg.untreatedCondition, jg.experimentSampleSheet,
+                 jg.controlSampleSheet)
+  Docs: function(dbaExperiment, dbaControl, jg.treatedCondition,
+                 jg.untreatedCondition)
+  Argument names in code not in docs:
+    jg.experimentSampleSheet jg.controlSampleSheet
 
-Undocumented arguments in documentation object 'jg.getDba'
-  ‘...’
-
-Undocumented arguments in documentation object 'jg.plotDeSeq'
-  ‘title.main’
-
-Undocumented arguments in documentation object 'jg.plotDeSeqCombined'
-  ‘jg.experimentResultsDeseq’
-Documented arguments not in \usage in documentation object 'jg.plotDeSeqCombined':
-  ‘jg.experimentResultsDeseqis’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
+* checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking contents of ‘data’ directory ... OK
 * checking data for non-ASCII characters ... OK
-* checking data for ASCII and uncompressed saves ... OK
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+                                old_size new_size compress
+  dbaControl.rda                   259Kb     81Kb       xz
+  dbaExperiment.rda                 25Kb     18Kb       xz
+  jg.controlCountsTreated.rda       11Kb      6Kb    bzip2
+  jg.controlCountsUntreated.rda     11Kb      6Kb    bzip2
+  jg.controlPeakset.rda             30Kb     17Kb       xz
+  jg.controlPeaksetDeSeq.rda        27Kb     17Kb       xz
+  jg.controlResultsDeseq.rda        70Kb     59Kb       xz
+  jg.experimentResultsDeseq.rda     16Kb     14Kb       xz
 * checking examples ... ERROR
 Running examples in ‘Brundle-Ex.R’ failed
 The error most likely occurred in:
 
 > base::assign(".ptime", proc.time(), pos = "CheckExEnv")
-> ### Name: jg.correctDBASizeFactors
-> ### Title: jg.correctDBASizeFactors
-> ### Aliases: jg.correctDBASizeFactors
+> ### Name: Brundle
+> ### Title: Brundle
+> ### Aliases: Brundle
 > ### Keywords: DESeq2 Diffbind
 > 
 > ### ** Examples
 > 
-> jg.correctDBASizeFactors(dba,jg.controlSizeFactors)
-Error in dba$class : object of type 'closure' is not subsettable
-Calls: jg.correctDBASizeFactors
+> data(dbaControl,package="Brundle")
+> data(dbaExperiment,package="Brundle")
+> Brundle(dbaExperiment,dbaControl,"Fulvestrant","none")
+Normalize Data
+Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
+  argument "jg.controlSampleSheet" is missing, with no default
+Calls: Brundle -> jg.getSampleIds -> read.csv -> read.table
 Execution halted
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 ERROR, 4 WARNINGs, 6 NOTEs
+Status: 1 ERROR, 3 WARNINGs, 5 NOTEs

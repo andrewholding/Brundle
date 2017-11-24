@@ -1,9 +1,26 @@
+Brundle                 Brundle
+dbaControl              Example DiffBind Object of Control Peaks
+dbaExperiment           Example DiffBind Object of Experimental Peaks
 jg.applyNormalisation   jg.applyNormalisation
+jg.conditions           Example Sample Condition Matrix
+jg.controlCountsTreated
+                        Example ChIP-seq Count Matrix
+jg.controlCountsUntreated
+                        Example ChIP-seq Count Matrix
+jg.controlPeaks         Example ChIP-seq Control Peakset
+jg.controlPeakset       Example ChIP-seq Control Peakset
+jg.controlPeaksetDeSeq
+                        Example ChIP-seq Control Peakset
+jg.controlResultsDeseq
+                        Example ChIP-seq DeSEQ2 Control results
 jg.convertPeakset       jg.convertPeakset
 jg.correctDBASizeFactors
                         jg.correctDBASizeFactors
 jg.countAlignedMReads   jg.countAlignedMReads
 jg.dbaGetPeakset        dbaGetPeakset
+jg.experimentPeakset    Example ChIP-seq Experiment Peakset
+jg.experimentResultsDeseq
+                        Example ChIP-seq DeSEQ2 results
 jg.getControlCounts     jg.getControlCounts
 jg.getCorrectionFactor
                         jg.getCorrectionFactor

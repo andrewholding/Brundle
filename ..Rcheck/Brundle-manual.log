@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.22)  18 SEP 2017 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.22)  24 NOV 2017 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,14 +779,19 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 21.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 22.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
 )
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 23.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 30.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 31.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -795,27 +800,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 1.
-)
+
+[1
+
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `Rd2.toc'.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
-) [1
-
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (2.78088pt too wide) in paragraph at lines 44--44
- []\T1/zi4/m/n/10 jg.applyNormalisation(jg.experimentPeakset, jg.coefficient, j
-g.correctionFactor,[] 
- []
-
-
-Overfull \hbox (126.78091pt too wide) in paragraph at lines 64--64
- []\T1/zi4/m/n/9 jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.exper
-imentPeakset, 1.267618, 0.6616886, c("1b", "2b", "3b"))[] 
- []
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
@@ -829,28 +821,17 @@ File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+Overfull \hbox (2.78088pt too wide) in paragraph at lines 127--127
+ []\T1/zi4/m/n/10 jg.applyNormalisation(jg.experimentPeakset, jg.coefficient, j
+g.correctionFactor,[] 
+ []
+
+[3] (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
-) [3]
-Overfull \hbox (2.5809pt too wide) in paragraph at lines 198--198
- []\T1/zi4/m/n/9 fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_
-DBA.csv",package="Brundle")[] 
- []
-
-
-Overfull \hbox (53.88089pt too wide) in paragraph at lines 200--200
- []\T1/zi4/m/n/9 jg.controlCountsTreated<-jg.getControlCounts(jg.controlPeakset
-, jg.controlSampleSheet,"Fulvestrant")[] 
- []
-
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 ) [4]
-Overfull \hbox (44.88089pt too wide) in paragraph at lines 235--235
- []\T1/zi4/m/n/9 jg.coefficient<-jg.getNormalizationCoefficient(jg.controlCount
-sTreated, jg.controlCountsUntreated)[] 
- []
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
@@ -862,47 +843,104 @@ File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 ) [6]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
-Overfull \hbox (29.3372pt too wide) in paragraph at lines 425--426
-[]\T1/ptm/m/n/10 is the peak-set of the con-trol data ex-tracted from a Diff-Bi
-nd ojbect with jg.dbaGetPeakset 
- []
-
-[7] (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [7]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
-) [8] (./Rd2.ind
-[9]
+) [8]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [9]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [10]
+Overfull \hbox (2.5809pt too wide) in paragraph at lines 511--511
+ []\T1/zi4/m/n/9 fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_
+DBA.csv",package="Brundle")[] 
+ []
+
+
+Overfull \hbox (53.88089pt too wide) in paragraph at lines 513--513
+ []\T1/zi4/m/n/9 jg.controlCountsTreated<-jg.getControlCounts(jg.controlPeakset
+, jg.controlSampleSheet,"Fulvestrant")[] 
+ []
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [11]
+Overfull \hbox (44.88089pt too wide) in paragraph at lines 548--548
+ []\T1/zi4/m/n/9 jg.coefficient<-jg.getNormalizationCoefficient(jg.controlCount
+sTreated, jg.controlCountsUntreated)[] 
+ []
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [12]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [13]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+Overfull \hbox (29.3372pt too wide) in paragraph at lines 740--741
+[]\T1/ptm/m/n/10 is the peak-set of the con-trol data ex-tracted from a Diff-Bi
+nd ojbect with jg.dbaGetPeakset 
+ []
+
+[14] (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+) [15] (./Rd2.ind
+[16]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
- [10
+ [17
+
+] [18
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
  (./Rd2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 813.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
 Package rerunfilecheck Info: File `Rd2.out' has not changed.
-(rerunfilecheck)             Checksum: 6CA5F0101BB53B9CAEFF1371670C1D97;1057.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 495.
+(rerunfilecheck)             Checksum: 4C9A281DD7B9C6F3BDBA2AA08A690873;1877.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 813.
  ) 
 Here is how much of TeX's memory you used:
- 6535 strings out of 493014
- 94092 string characters out of 6133351
- 172878 words of memory out of 5000000
- 9857 multiletter control sequences out of 15000+600000
- 40674 words of font info for 49 fonts, out of 8000000 for 9000
+ 6686 strings out of 493014
+ 97422 string characters out of 6133351
+ 173878 words of memory out of 5000000
+ 9888 multiletter control sequences out of 15000+600000
+ 40988 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,34p,321b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,34p,561b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2016/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/l
@@ -912,10 +950,10 @@ live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (10 pages, 105522 bytes).
+Output written on Rd2.pdf (18 pages, 118331 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 288 compressed objects within 3 object streams
- 99 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 477 compressed objects within 5 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

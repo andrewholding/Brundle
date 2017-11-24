@@ -1,3 +1,9 @@
+^.DS_Store
+^.Rhistory
+^.gitignore
+^..Rcheck
+^.Rproj.user
+^.git
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\README.md

@@ -17,6 +17,28 @@ library('Brundle')
 
 base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
 cleanEx()
+nameEx("Brundle")
+### * Brundle
+
+flush(stderr()); flush(stdout())
+
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+### Name: Brundle
+### Title: Brundle
+### Aliases: Brundle
+### Keywords: DESeq2 Diffbind
+
+### ** Examples
+
+data(dbaControl,package="Brundle")
+data(dbaExperiment,package="Brundle")
+Brundle(dbaExperiment,dbaControl,"Fulvestrant","none")
+
+
+
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("Brundle", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+cleanEx()
 nameEx("jg.applyNormalisation")
 ### * jg.applyNormalisation
 
@@ -31,7 +53,10 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### ** Examples
 
 data(jg.experimentPeakset, package="Brundle")
-jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset, 1.267618, 0.6616886, c("1b", "2b", "3b"))
+jg.experimentPeaksetNormalised<-jg.applyNormalisation(jg.experimentPeakset,
+                                                       1.267618,
+                                                       0.6616886,
+                                                       c("1b", "2b", "3b"))
 
 
 
@@ -72,7 +97,10 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 
 ### ** Examples
 
-jg.correctDBASizeFactors(dba,jg.controlSizeFactors)
+data(jg.controlPeaksetDeSeq,package="Brundle")
+data(dbaExperiment,package="Brundle")
+jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+jg.correctDBASizeFactors(dbaExperiment,jg.controlSizeFactors)
 
 
 
@@ -258,7 +286,10 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 
 ### ** Examples
 
-jg.runDeSeq(jg.PeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
+data(jg.controlPeaksetDeSeq,package="Brundle")
+data(jg.conditions,package="Brundle")
+jg.controlSizeFactors = estimateSizeFactorsForMatrix(jg.controlPeaksetDeSeq)
+jg.runDeSeq(jg.controlPeaksetDeSeq,jg.conditions, jg.SizeFactors = NULL)
 
 
 

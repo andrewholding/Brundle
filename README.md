@@ -1,6 +1,6 @@
 # Brundle
 Brundle is an R package that provides a series of functions for the normalisation of ChIP-Seq data
-to internal or external controls. It can be installed using the [Brundle package on CRAN](https://cran.r-project.org/web/packages/Brundle/index.html).
+to internal or external controls. It can be installed using the [Brundle package on CRAN](https://CRAN.R-project.org/package=Brundle).
 
 It is supported by the data package [BrudleData](https://github.com/andrewholding/BrundleData).
 

@@ -8,7 +8,16 @@
 #' @author Andrew Holding
 NULL
 #' @name dbaExperiment
-#' @title Example DiffBind Object
+#' @title Example DiffBind Object of Experimental Peaks
+#' @description This data set is a DiffBind object of example ChIP-seq experiments
+#' @docType data
+#' @usage jdbaExperiment
+#' @format Diffbind Object
+#' @source Original data from experiment
+#' @author Andrew Holding
+NULL
+#' @name dbaControl
+#' @title Example DiffBind Object of Control Peaks
 #' @description This data set is a DiffBind object of example ChIP-seq experiments
 #' @docType data
 #' @usage jdbaExperiment

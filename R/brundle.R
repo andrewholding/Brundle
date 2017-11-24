@@ -148,6 +148,7 @@ jg.getNormalizationCoefficient <-
 #' @param jg.treatedNames is a list of sample samples for the treated conditions
 #' @param jg.coefficient is a normalisation coefficient for the data that can be generated via the pipeline. Can be set to 1 to view before normalisation.
 #' @import graphics stats
+#' @export
 #' @keywords plot normalization
 
 jg.plotMA <-
@@ -264,6 +265,7 @@ jg.dbaGetPeakset <- function(dba)
 #'
 #' @param jg.controlSampleSheet is the filename of the samplesheet
 #' @import utils
+#' @export
 #' @keywords DiffBind samplesheet sample
 
 jg.getSampleIds <- function(jg.controlSampleSheet)
@@ -626,4 +628,88 @@ jg.correctDBASizeFactors <- function(dba, jg.controlSizeFactors)
 
     dba$class["Reads", ] <- dba.correctedReads
     return(dba)
+}
+
+
+
+#' Brundle
+#'
+#' Normalise one DiffBind object to a second control set of peaks. Examples
+#' do not run as BAM files are not included for package size.
+#'
+#' @param dbaExperiment DiffBind object to be normalised
+#' @param dbaControl DiffBind object of control peaks
+#' @param jg.treatedCondition Identical to treated condition in the sample sheet.
+#' @param jg.untreatedCondition Identical to the control condition in the sample sheet.
+#' @param jg.experimentSampleSheet Filename of samplesheet for experimental peaks
+#' @param jg.controlSampleSheet Filename of samplesheet for control peaks
+#' @keywords DESeq2 Diffbind
+#' @export
+#' @examples
+#' \dontrun{ data(dbaExperiment,package="Brundle")
+#' data(dbaControl,package="Brundle")
+#' fpath <- system.file("extdata", "samplesheet_SLX14438_hs_ER_DBA.csv",package="Brundle")
+#' jg.ExperimentSampleSheet<-fpath
+#' fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv",package="Brundle")
+#' jg.ControlSampleSheet<-fpath
+#' Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",jg.ExperimentSampleSheet,jg.ControlSampleSheet)
+#' }
+
+
+Brundle<-function(
+    dbaExperiment,
+    dbaControl,
+    jg.treatedCondition,
+    jg.untreatedCondition,
+    jg.experimentSampleSheet,
+    jg.controlSampleSheet
+) {
+
+
+
+    message("Normalize Data")
+
+    #Load Sample Ids from control sample sheet.
+    jg.sampleIds <- jg.getSampleIds(jg.controlSampleSheet)
+
+
+    ## Extract Peak set from DiffBind
+    jg.experimentPeakset <- jg.dbaGetPeakset(dbaExperiment)
+    jg.controlPeakset    <- jg.dbaGetPeakset(dbaControl)
+
+
+    #Get counts for each condition
+    jg.controlCountsTreated <- jg.getControlCounts(jg.controlPeakset,
+                                                   jg.controlSampleSheet,
+                                                   jg.treatedCondition)
+    jg.controlCountsUntreated <-
+        jg.getControlCounts(jg.controlPeakset,
+                            jg.controlSampleSheet,
+                            jg.untreatedCondition)
+
+    #Get sample names for conditions
+    jg.untreatedNames <- names(jg.controlCountsUntreated)
+    jg.treatedNames   <- names(jg.controlCountsTreated)
+
+    ##Get Normalization Coefficient
+    jg.coefficient <-
+        jg.getNormalizationCoefficient(jg.controlCountsTreated,
+                                       jg.controlCountsUntreated)
+
+    jg.correctionFactor <-
+        jg.getCorrectionFactor(jg.experimentSampleSheet,
+                               jg.treatedNames,
+                               jg.untreatedNames)
+
+    #Apply coefficent and control factor
+    jg.experimentPeaksetNormalised <-
+        jg.applyNormalisation(jg.experimentPeakset,
+                              jg.coefficient,
+                              jg.correctionFactor,
+                              jg.treatedNames)
+
+    #Return values to Diffbind and plot normalised result.
+    jg.dba <- DiffBind:::pv.resetCounts(dbaExperiment,
+                                        jg.experimentPeaksetNormalised)
+    return(jg.dba)
 }
