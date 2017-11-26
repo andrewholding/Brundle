@@ -5,7 +5,8 @@
 \title{Brundle}
 \usage{
 Brundle(dbaExperiment, dbaControl, jg.treatedCondition, jg.untreatedCondition,
-  jg.experimentSampleSheet, jg.controlSampleSheet)
+  jg.experimentSampleSheet, jg.controlSampleSheet,
+  jg.correctionFactor = FALSE)
 }
 \arguments{
 \item{dbaExperiment}{DiffBind object to be normalised}
@@ -19,20 +20,21 @@ Brundle(dbaExperiment, dbaControl, jg.treatedCondition, jg.untreatedCondition,
 \item{jg.experimentSampleSheet}{Filename of samplesheet for experimental peaks}
 
 \item{jg.controlSampleSheet}{Filename of samplesheet for control peaks}
+
+\item{jg.correctionFactor}{Manually specify correction factor for example.}
 }
 \description{
-Normalise one DiffBind object to a second control set of peaks. Examples
-do not run as BAM files are not included for package size.
+Normalise one DiffBind object to a second control set of peaks.
 }
 \examples{
-\dontrun{ data(dbaExperiment,package="Brundle")
+data(dbaExperiment,package="Brundle")
 data(dbaControl,package="Brundle")
 fpath <- system.file("extdata", "samplesheet_SLX14438_hs_ER_DBA.csv",package="Brundle")
 jg.ExperimentSampleSheet<-fpath
 fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv",package="Brundle")
 jg.ControlSampleSheet<-fpath
-Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",jg.ExperimentSampleSheet,jg.ControlSampleSheet)
-}
+Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",
+         jg.ExperimentSampleSheet,jg.ControlSampleSheet,0.6616886)
 }
 \keyword{DESeq2}
 \keyword{Diffbind}
