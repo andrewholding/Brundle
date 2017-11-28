@@ -22,7 +22,7 @@ jg.ControlSampleSheet<-fpath
 dba<-Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",
     jg.ExperimentSampleSheet,jg.ControlSampleSheet,0.6616886)
 
-#The analyse the normalised Diffbind object as normal
+#Then analyse the normalised Diffbind object as normal
 dba<-dba.analyze(dba)
 dba.plotMA(dba, bFlip=TRUE)
 ```
