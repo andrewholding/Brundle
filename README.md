@@ -22,6 +22,7 @@ jg.ControlSampleSheet<-fpath
 dba<-Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",
     jg.ExperimentSampleSheet,jg.ControlSampleSheet,0.6616886)
 
+#The analyse the normalised Diffbind object as normal
 dba<-dba.analyze(dba)
 dba.plotMA(dba, bFlip=TRUE)
 ```
@@ -30,12 +31,14 @@ dba.plotMA(dba, bFlip=TRUE)
 ![Workflow](https://cdn.rawgit.com/andrewholding/Brundle_Example/master/images/workflow.svg)
 
 ## Example Data on UCSC Gene Browser
-[CTCF Spike in-data](http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=Brundle)
+[CTCF Spike-in data](http://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=Brundle)
 
-[H2Av Spike in-data - Human](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av)
+[H2Av Spike-in data - Human](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av)
 
-[H2Av Spike in-data -Drosophilia](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av%20dm3)
+[H2Av Spike-in data -Drosophilia](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FH2av%20dm3)
 
 [hsER/mmER Spike-in data - Human](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=hsER%2FmmER)
 
 [hsER/mmER Spike-in data - Mouse](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=HsER%2FmmER%20mm9)
+
+[CTCF Spike-in (+/-E2) data](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FCTCF)
