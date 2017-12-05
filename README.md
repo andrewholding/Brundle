@@ -43,4 +43,5 @@ dba.plotMA(dba, bFlip=TRUE)
 
 [CTCF Spike-in (+/-E2) ER data](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=ER%2FCTCF)
 
-[CTCF Spike-in (+/-E2) H4k12ac data](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=H4K12ac%2FCTCF_
+[CTCF Spike-in (+/-E2) H4k12ac data](https://genome.ucsc.edu/cgi-bin/hgTracks?hgS_doOtherUser=submit&hgS_otherUserName=andrewholding&hgS_otherUserSessionName=H4K12ac%2FCTCF)
+
