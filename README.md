@@ -14,8 +14,8 @@ Below is a quick example that will generate a normalised MA plot, the only prere
 # Install Package
 library(devtools)
 install_github("andrewholding/Brundle")
- 
 # You may also need to install packages from BioConductor e.g. DiffBind
+
 # Load package
 library(Brundle)
 
@@ -47,7 +47,7 @@ jg.experimentPeaksetNormalised<-Brundle(dbaExperiment,
                                         jg.noBAMs=TRUE
                                         )
 
-#Insert data back into DiffBind object
+# Insert data back into DiffBind object
 dba <- DiffBind:::pv.resetCounts(dbaExperiment, jg.experimentPeaksetNormalised)
 
 # Process with DiffBind as normal
