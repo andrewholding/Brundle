@@ -16,10 +16,10 @@ library(devtools)
 install_github("andrewholding/Brundle")
  
 # You may also need to install packages from BioConductor e.g. DiffBind
-
+# Load package
 library(Brundle)
 
-#Load Example Diffbind Object
+# Load Example Diffbind Object
 data(dbaExperiment,package="Brundle")
 data(dbaControl,package="Brundle")
 
