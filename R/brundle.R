@@ -642,7 +642,8 @@ jg.correctDBASizeFactors <- function(dba, jg.controlSizeFactors)
 #' @param jg.untreatedCondition Identical to the control condition in the sample sheet.
 #' @param jg.experimentSampleSheet Filename of samplesheet for experimental peaks
 #' @param jg.controlSampleSheet Filename of samplesheet for control peaks
-#' @param jg.correctionFactor Manually specify correction factor for example.
+#' @param jg.correctionFactor Manually specify correction factor.
+#' @param jg.noBAMs If set to true, correction factor is estimated from the DiffBind object.
 #' @keywords DESeq2 Diffbind
 #' @export
 #' @examples
@@ -653,7 +654,8 @@ jg.correctDBASizeFactors <- function(dba, jg.controlSizeFactors)
 #' fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv",package="Brundle")
 #' jg.ControlSampleSheet<-fpath
 #' Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",
-#'          jg.ExperimentSampleSheet,jg.ControlSampleSheet,0.6616886)
+#'          jg.ExperimentSampleSheet,jg.ControlSampleSheet,jg.noBAMs=TRUE)
+#'
 
 
 Brundle<-function(
@@ -663,7 +665,8 @@ Brundle<-function(
     jg.untreatedCondition,
     jg.experimentSampleSheet,
     jg.controlSampleSheet,
-    jg.correctionFactor=FALSE
+    jg.correctionFactor=FALSE,
+    jg.noBAMs=FALSE
 ) {
 
 
@@ -697,12 +700,25 @@ Brundle<-function(
         jg.getNormalizationCoefficient(jg.controlCountsTreated,
                                        jg.controlCountsUntreated)
 
-    if (jg.correctionFactor==FALSE) {
-    jg.correctionFactor <-
-        jg.getCorrectionFactor(jg.experimentSampleSheet,
-                               jg.treatedNames,
-                               jg.untreatedNames)
+    if (jg.noBAMs==TRUE) {
+        untreated <-
+            as.numeric(row.names(dbaExperiment$samples)[dbaExperiment$samples$Condition ==
+                                                            jg.untreatedCondition])
+        treated <-
+            as.numeric(row.names(dbaExperiment$samples)[dbaExperiment$samples$Condition ==
+                                                            jg.treatedCondition])
+        jg.correctionFactor <-
+            sum(as.numeric(dbaExperiment$class['Reads', c(treated)])) / sum(as.numeric(dbaExperiment$class['Reads', c(untreated)]))
     }
+
+    if (jg.correctionFactor==FALSE) {
+        jg.correctionFactor <-
+            jg.getCorrectionFactor(jg.experimentSampleSheet,
+                                   jg.treatedNames,
+                                   jg.untreatedNames)
+    }
+
+
 
     #Apply coefficent and control factor
     jg.experimentPeaksetNormalised <-
@@ -712,7 +728,7 @@ Brundle<-function(
                               jg.treatedNames)
 
     #Return values to Diffbind and plot normalised result.
-    jg.dba <- DiffBind:::pv.resetCounts(dbaExperiment,
-                                        jg.experimentPeaksetNormalised)
-    return(jg.dba)
+    #jg.dba <- DiffBind:::pv.resetCounts(dbaExperiment,
+    #                                    jg.experimentPeaksetNormalised)
+    return(jg.experimentPeaksetNormalised)
 }

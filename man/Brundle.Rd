@@ -6,7 +6,7 @@
 \usage{
 Brundle(dbaExperiment, dbaControl, jg.treatedCondition, jg.untreatedCondition,
   jg.experimentSampleSheet, jg.controlSampleSheet,
-  jg.correctionFactor = FALSE)
+  jg.correctionFactor = FALSE, jg.noBAMs = FALSE)
 }
 \arguments{
 \item{dbaExperiment}{DiffBind object to be normalised}
@@ -21,7 +21,9 @@ Brundle(dbaExperiment, dbaControl, jg.treatedCondition, jg.untreatedCondition,
 
 \item{jg.controlSampleSheet}{Filename of samplesheet for control peaks}
 
-\item{jg.correctionFactor}{Manually specify correction factor for example.}
+\item{jg.correctionFactor}{Manually specify correction factor.}
+
+\item{jg.noBAMs}{If set to true, correction factor is estimated from the DiffBind object.}
 }
 \description{
 Normalise one DiffBind object to a second control set of peaks.
@@ -34,7 +36,8 @@ jg.ExperimentSampleSheet<-fpath
 fpath <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv",package="Brundle")
 jg.ControlSampleSheet<-fpath
 Brundle(dbaExperiment,dbaControl,"Fulvestrant","none",
-         jg.ExperimentSampleSheet,jg.ControlSampleSheet,0.6616886)
+         jg.ExperimentSampleSheet,jg.ControlSampleSheet,jg.noBAMs=TRUE)
+
 }
 \keyword{DESeq2}
 \keyword{Diffbind}
