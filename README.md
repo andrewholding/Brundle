@@ -10,7 +10,7 @@ It is supported by the data package [BrudleData](https://github.com/andrewholdin
 
 Below is a quick example that will generate a normalised MA plot, the only prerequisite is to either install the package first, either from CRAN as described above or directly from this repository. 
 
-```
+```R
 library(devtools)
 install_github("andrewholding/Brundle")
 
