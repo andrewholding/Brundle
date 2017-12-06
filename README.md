@@ -11,10 +11,11 @@ It is supported by the data package [BrudleData](https://github.com/andrewholdin
 Below is a quick example that will generate a normalised MA plot, the only prerequisite is to either install the package first, either from CRAN as described above or directly from this repository. 
 
 ```R
+# Install Package
 library(devtools)
 install_github("andrewholding/Brundle")
-
-#You may also need to install packages from BioConductor e.g. DiffBind
+ 
+# You may also need to install packages from BioConductor e.g. DiffBind
 
 library(Brundle)
 
@@ -22,7 +23,7 @@ library(Brundle)
 data(dbaExperiment,package="Brundle")
 data(dbaControl,package="Brundle")
 
-#Load Example Samplesheets
+# Load Example Samplesheets
 fpath <- system.file("extdata", 
                      "samplesheet_SLX14438_hs_ER_DBA.csv",
                      package="Brundle"
@@ -35,7 +36,7 @@ fpath <- system.file("extdata",
 jg.ControlSampleSheet<-fpath
 
 
-#Normalise with Brundle
+# Normalise with Brundle
 
 jg.experimentPeaksetNormalised<-Brundle(dbaExperiment,
                                         dbaControl,
@@ -46,10 +47,10 @@ jg.experimentPeaksetNormalised<-Brundle(dbaExperiment,
                                         jg.noBAMs=TRUE
                                         )
 
-#Re-insert data into DiffBind object
+#Insert data back into DiffBind object
 dba <- DiffBind:::pv.resetCounts(dbaExperiment, jg.experimentPeaksetNormalised)
 
-#Process with DiffBind as normal
+# Process with DiffBind as normal
 dba<-dba.analyze(dba)
 dba.plotMA(dba, bFlip=TRUE, bSmooth=FALSE)
 
