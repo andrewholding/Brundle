@@ -24,16 +24,10 @@ data(dbaExperiment,package="Brundle")
 data(dbaControl,package="Brundle")
 
 # Load Example Samplesheets
-fpath <- system.file("extdata", 
-                     "samplesheet_SLX14438_hs_ER_DBA.csv",
-                     package="Brundle"
-                     )
-jg.ExperimentSampleSheet<-fpath
-fpath <- system.file("extdata", 
-                    "samplesheet_SLX14438_hs_CTCF_DBA.csv",
-                    package="Brundle"
-                    )
-jg.ControlSampleSheet<-fpath
+exptCSV <- system.file("extdata", "samplesheet_SLX14438_hs_ER_DBA.csv",   package="Brundle")
+ctrlCSV <- system.file("extdata", "samplesheet_SLX14438_hs_CTCF_DBA.csv", package="Brundle")
+jg.ExperimentSampleSheet<-exptCSV
+jg.ControlSampleSheet<-ctrlCSV
 
 
 # Normalise with Brundle
