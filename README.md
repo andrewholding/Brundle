@@ -37,7 +37,6 @@ jg.ControlSampleSheet<-fpath
 
 
 # Normalise with Brundle
-
 jg.experimentPeaksetNormalised<-Brundle(dbaExperiment,
                                         dbaControl,
                                         "Fulvestrant",
