@@ -25,8 +25,8 @@ Overlays the plots from the output from DESeq2 for the Brundle pipeline
 data(jg.controlResultsDeseq,package="Brundle")
 data(jg.experimentResultsDeseq,package="Brundle")
 
-jg.plotDeSeqCombined(jg.controlResultsDeseq,
-                    jg.experimentResultsDeseq,
+jg.plotDeSeqCombined(as.data.frame(jg.controlResultsDeseq),
+                    as.data.frame(jg.experimentResultsDeseq),
                     title.main="ER and CTCF Binding Folding changes on ER treatment",
                     p=0.01,flip=TRUE)
 

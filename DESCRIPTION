@@ -1,7 +1,7 @@
 Package: Brundle
 Type: Package
 Title: Normalisation Tools for Inter-Condition Variability of ChIP-Seq Data
-Version: 1.0.7
+Version: 1.0.8
 Author: Andrew N Holding
 Maintainer: Andrew N Holding <andrew.holding@cruk.cam.ac.uk>
 Description:Inter-sample condition variability is a key challenge of normalising ChIP-seq data. This implementation uses either spike-in or a second factor as a control for normalisation. Input can either be from 'DiffBind' or a matrix formatted for 'DESeq2'. The output is either a 'DiffBind' object or the default 'DESeq2' output. Either can then be processed as normal. Supporting manuscript Guertin, Markowetz and Holding (2017) <doi:10.1101/182261>.
