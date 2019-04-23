@@ -4,8 +4,8 @@
 \alias{Brundle}
 \title{Brundle}
 \usage{
-Brundle(dbaExperiment, dbaControl, jg.treatedCondition, jg.untreatedCondition,
-  jg.experimentSampleSheet, jg.controlSampleSheet,
+Brundle(dbaExperiment, dbaControl, jg.treatedCondition,
+  jg.untreatedCondition, jg.experimentSampleSheet, jg.controlSampleSheet,
   jg.correctionFactor = FALSE, jg.noBAMs = FALSE)
 }
 \arguments{

@@ -23,6 +23,7 @@ Plots the output from DESeq2 for the Brundle pipeline
 }
 \examples{
  data(jg.experimentResultsDeseq,package="Brundle")
+ jg.experimentResultsDeseq<-suppressWarnings(as.data.frame(jg.experimentResultsDeseq))
  jg.plotDeSeq(jg.experimentResultsDeseq,
   p=0.01,
   title.main="Fold-change in ER binding",

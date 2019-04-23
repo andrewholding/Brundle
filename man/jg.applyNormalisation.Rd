@@ -4,8 +4,8 @@
 \alias{jg.applyNormalisation}
 \title{jg.applyNormalisation}
 \usage{
-jg.applyNormalisation(jg.experimentPeakset, jg.coefficient, jg.correctionFactor,
-  jg.treatedNames)
+jg.applyNormalisation(jg.experimentPeakset, jg.coefficient,
+  jg.correctionFactor, jg.treatedNames)
 }
 \arguments{
 \item{jg.experimentPeakset}{is the peakset extracted from the Diffbind object}
